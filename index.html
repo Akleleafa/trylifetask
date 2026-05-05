@@ -166,14 +166,42 @@
 
     <footer class="footer">
       <div class="section-shell footer-inner">
-        <a class="brand" href="#top" aria-label="LifeTask home">
-          <span class="brand-mark" aria-hidden="true">
-            <span></span>
-          </span>
-          <span>Lifetask</span>
-        </a>
-        <p>Guided reflection for finding work direction.</p>
+        <div class="footer-contact">
+          <p class="footer-label">Contact</p>
+          <p>hello@trylifetask.com</p>
+        </div>
+        <div class="footer-contact">
+          <p class="footer-label">Support</p>
+          <p>support@trylifetask.com</p>
+        </div>
+        <div class="footer-contact">
+          <p class="footer-label">Company</p>
+          <p>Business address placeholder</p>
+        </div>
       </div>
     </footer>
+    <script>
+      const revealTargets = document.querySelectorAll(
+        '.editorial-list article, .split-section, .feature-grid article, .preview-section .section-intro, .wide-shot, .process-section, .steps article, .audience-section, .audience-list p, .final-cta-inner'
+      );
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        revealTargets.forEach((target) => target.classList.add('is-visible'));
+      } else {
+        revealTargets.forEach((target) => target.classList.add('reveal'));
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.18, rootMargin: '0px 0px -8% 0px' }
+        );
+        revealTargets.forEach((target) => observer.observe(target));
+      }
+    </script>
   </body>
 </html>
