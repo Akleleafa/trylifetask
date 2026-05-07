@@ -58,10 +58,17 @@
               <p>Build a living map of what fits, what gets in the way, and what kind of work gives you energy.</p>
             </article>
           </div>
-          <div class="phone-preview-card" aria-label="LifeTask mobile app previews">
-            <img class="phone-shot phone-shot-left" src="./assets/mobile-discovery-phone.png" alt="LifeTask Discovery screen on mobile" />
-            <img class="phone-shot phone-shot-main" src="./assets/mobile-direction-phone.png" alt="LifeTask map screen on mobile" />
-            <img class="phone-shot phone-shot-right" src="./assets/mobile-skill-map-phone.png" alt="LifeTask Skill Map screen on mobile" />
+          <div class="phone-preview" aria-label="LifeTask mobile app previews">
+            <div class="phone-track" tabindex="0" aria-label="Swipe through LifeTask mobile previews">
+              <img class="phone-shot phone-shot-left" src="./assets/mobile-discovery-phone-clean.png" alt="LifeTask Discovery screen on mobile" />
+              <img class="phone-shot phone-shot-main" src="./assets/mobile-direction-phone-clean.png" alt="LifeTask map screen on mobile" />
+              <img class="phone-shot phone-shot-right" src="./assets/mobile-skill-map-phone-clean.png" alt="LifeTask Skill Map screen on mobile" />
+            </div>
+            <div class="phone-dots" aria-hidden="true">
+              <span class="is-active"></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </section>
@@ -166,7 +173,7 @@
     </footer>
     <script>
       const revealTargets = document.querySelectorAll(
-        '.overview-copy article, .phone-preview-card, .phone-shot, .split-section > .section-intro, .feature-grid article, .process-section > .section-intro, .steps article, .audience-section > .section-intro, .audience-list p, .final-cta-inner'
+        '.overview-copy article, .phone-preview, .phone-shot, .split-section > .section-intro, .feature-grid article, .process-section > .section-intro, .steps article, .audience-section > .section-intro, .audience-list p, .final-cta-inner'
       );
 
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -185,6 +192,33 @@
           { threshold: 0.18, rootMargin: '0px 0px -8% 0px' }
         );
         revealTargets.forEach((target) => observer.observe(target));
+      }
+
+      const phoneTrack = document.querySelector('.phone-track');
+      const phoneDots = [...document.querySelectorAll('.phone-dots span')];
+
+      if (phoneTrack && phoneDots.length) {
+        const setActivePhone = () => {
+          const slides = [...phoneTrack.querySelectorAll('.phone-shot')];
+          const trackCenter = phoneTrack.scrollLeft + phoneTrack.clientWidth / 2;
+          let activeIndex = 0;
+          let activeDistance = Number.POSITIVE_INFINITY;
+
+          slides.forEach((slide, index) => {
+            const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+            const distance = Math.abs(trackCenter - slideCenter);
+            if (distance < activeDistance) {
+              activeDistance = distance;
+              activeIndex = index;
+            }
+          });
+
+          phoneDots.forEach((dot, index) => dot.classList.toggle('is-active', index === activeIndex));
+        };
+
+        phoneTrack.addEventListener('scroll', () => requestAnimationFrame(setActivePhone), { passive: true });
+        window.addEventListener('resize', setActivePhone);
+        setActivePhone();
       }
     </script>
   </body>
