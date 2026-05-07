@@ -1226,7 +1226,7 @@ p {
 
 @media (min-width: 981px) {
   .phone-track {
-    transform: scale(1.22);
+    transform: scale(1.08);
     transform-origin: center;
   }
 }
