@@ -318,10 +318,9 @@ p {
 .phone-track {
   position: relative;
   display: grid;
-  grid-template-columns: 0.95fr 1.08fr 0.95fr;
+  grid-template-columns: 0.92fr 1.08fr 0.92fr;
   align-items: center;
-  gap: 18px;
-  min-height: 560px;
+  gap: 12px;`r`n  min-height: 560px;
   padding: 0;
 }
 
@@ -329,14 +328,14 @@ p {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 250px;
+  max-width: 315px;
   justify-self: center;
   transition: transform 260ms ease;
 }
 
 .phone-shot-main {
   z-index: 3;
-  max-width: 296px;
+  max-width: 375px;
   transform: translateY(-8px);
 }
 
@@ -1222,5 +1221,12 @@ p {
 @media (max-width: 680px) {
   .phone-image {
     filter: none;
+  }
+}
+
+@media (min-width: 981px) {
+  .phone-track {
+    transform: scale(1.22);
+    transform-origin: center;
   }
 }
