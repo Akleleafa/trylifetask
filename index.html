@@ -43,19 +43,26 @@
       </section>
 
       <section id="app" class="editorial-overview">
-        <div class="editorial-list">
-          <article>
-            <h2>Deep Dive</h2>
-            <p>Understand how your experiences have shaped your personality, skills, and intrinsic interests.</p>
-          </article>
-          <article>
-            <h2>Create a Skill Map</h2>
-            <p>Turn lived examples into strengths, developing skills, and early signals worth tracking.</p>
-          </article>
-          <article>
-            <h2>Clarify Your Direction</h2>
-            <p>Build a living map of what fits, what gets in the way, and what kind of work gives you energy.</p>
-          </article>
+        <div class="section-shell editorial-grid">
+          <div class="overview-copy">
+            <article>
+              <h2>Deep Dive</h2>
+              <p>Understand how your experiences have shaped your personality, skills, and intrinsic interests.</p>
+            </article>
+            <article>
+              <h2>Create a Skill Map</h2>
+              <p>Turn lived examples into strengths, developing skills, and early signals worth tracking.</p>
+            </article>
+            <article>
+              <h2>Clarify Your Direction</h2>
+              <p>Build a living map of what fits, what gets in the way, and what kind of work gives you energy.</p>
+            </article>
+          </div>
+          <div class="phone-preview-card" aria-label="LifeTask mobile app previews">
+            <img class="phone-shot phone-shot-left" src="./assets/mobile-discovery-phone.png" alt="LifeTask Discovery screen on mobile" />
+            <img class="phone-shot phone-shot-main" src="./assets/mobile-direction-phone.png" alt="LifeTask map screen on mobile" />
+            <img class="phone-shot phone-shot-right" src="./assets/mobile-skill-map-phone.png" alt="LifeTask Skill Map screen on mobile" />
+          </div>
         </div>
       </section>
 
@@ -89,29 +96,6 @@
               or emerging.
             </p>
           </article>
-        </div>
-      </section>
-
-      <section class="preview-section">
-        <div class="section-shell">
-          <div class="section-intro centered">
-            <p class="eyebrow">App preview</p>
-            <h2>Your answers become a direction, a map, and a clearer read of yourself.</h2>
-          </div>
-          <div class="screenshots">
-            <figure class="wide-shot">
-              <img src="./assets/web-discovery.png" alt="LifeTask Discovery dashboard preview" />
-              <figcaption>Discovery keeps the current step and next step visible.</figcaption>
-            </figure>
-            <figure class="wide-shot">
-              <img src="./assets/web-direction.png" alt="LifeTask direction page preview" />
-              <figcaption>Lifetask summarizes the user's direction and personality pattern.</figcaption>
-            </figure>
-            <figure class="wide-shot">
-              <img src="./assets/web-skill-map.png" alt="LifeTask skill map preview" />
-              <figcaption>Skill Map organizes confirmed strengths and emerging skills.</figcaption>
-            </figure>
-          </div>
         </div>
       </section>
 
@@ -182,7 +166,7 @@
     </footer>
     <script>
       const revealTargets = document.querySelectorAll(
-        '.editorial-list article, .split-section > .section-intro, .feature-grid article, .preview-section .section-intro, .wide-shot, .process-section > .section-intro, .steps article, .audience-section > .section-intro, .audience-list p, .final-cta-inner'
+        '.overview-copy article, .phone-preview-card, .phone-shot, .split-section > .section-intro, .feature-grid article, .process-section > .section-intro, .steps article, .audience-section > .section-intro, .audience-list p, .final-cta-inner'
       );
 
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
