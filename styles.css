@@ -1209,7 +1209,7 @@ p {
 .phone-image {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 16px 24px rgba(31, 43, 54, 0.12));
+  filter: none;
 }
 
 .phone-device,
@@ -1221,6 +1221,6 @@ p {
 
 @media (max-width: 680px) {
   .phone-image {
-    filter: drop-shadow(0 10px 16px rgba(31, 43, 54, 0.1));
+    filter: none;
   }
 }
