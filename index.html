@@ -8,23 +8,22 @@
       content="LifeTask is a guided reflection app that turns your past experiences, current friction, and skills into a clearer direction."
     />
     <title>LifeTask | Find the work that fits you</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/icon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="#top" aria-label="LifeTask home">
-          <span class="brand-mark" aria-hidden="true">
-            <span></span>
-          </span>
-          <span>Lifetask</span>
+          <img class="brand-logo" src="./assets/lifetask-mark.svg" alt="" aria-hidden="true" />
+          <span>LifeTask</span>
         </a>
         <div class="nav-links" aria-label="Page sections">
           <a href="#app">Our App</a>
-          <a href="#how">How it works</a>
           <a href="#who">Who it is for</a>
         </div>
-        <a class="nav-cta" href="mailto:hello@trylifetask.com?subject=LifeTask early access">Get early access</a>
+        <a class="nav-cta" href="https://app.trylifetask.com">Get early access</a>
       </nav>
     </header>
 
@@ -33,97 +32,100 @@
         <div class="hero-inner">
           <h1>From confusion to clarity. Discover your LifeTask.</h1>
           <p class="hero-lede">
-            LifeTask guides you through focused reflection so your past experiences, skills, and recurring patterns
-            become a clearer work direction.
+            LifeTask guides you through focused reflection so, with your past experiences and recurring patterns, we can
+            unravel the life path that fits you best, then use that to build your skills and learning path.
           </p>
-          <a class="button primary" href="mailto:hello@trylifetask.com?subject=LifeTask early access">Get early access</a>
+          <div class="hero-actions">
+            <a class="hero-down-arrow" href="#app" aria-label="Scroll to the app section"></a>
+          </div>
         </div>
       </section>
 
       <section id="app" class="editorial-overview">
-        <div class="section-shell editorial-grid">
-          <div class="overview-copy">
-            <article>
-              <h2>Deep Dive</h2>
-              <p>Understand how your experiences have shaped your personality, skills, and intrinsic interests.</p>
-            </article>
-            <article>
-              <h2>Lifetask Map</h2>
-              <p>See what gets in the way, what may fit you, and the through-line your answers are starting to reveal.</p>
-            </article>
-            <article>
-              <h2>Skills Board</h2>
-              <p>Turn lived examples into strengths, developing skills, and early signals worth tracking.</p>
-            </article>
+        <div class="section-shell mission-copy">
+          <p>
+            Most people live a reactionary life, guided by shallow principles that lead them into jobs or paths that
+            never truly fit them, creating dissatisfaction and a lack of energy and motivation.
+          </p>
+          <p>
+            Our mission is to help you rediscover the true direction that may have been buried deep down, so we can help
+            you rebuild a viable path that actually makes you happy and motivated.
+          </p>
+        </div>
+      </section>
+
+      <section class="product-story">
+        <div class="section-shell">
+          <div class="product-story-heading">
+            <h2>Here is how we help.</h2>
           </div>
-          <div class="phone-preview" aria-label="LifeTask mobile app previews">
-            <div class="phone-track" tabindex="0" aria-label="Swipe through LifeTask mobile previews">
-              <figure class="phone-shot phone-shot-left">
-                <img class="phone-image" src="./assets/mobile-discovery-phone-clean.png" alt="LifeTask discovery screen" />
-                <figcaption>Discovery</figcaption>
-              </figure>
-              <figure class="phone-shot phone-shot-main">
+
+          <article class="product-row">
+            <div class="product-copy">
+              <p class="eyebrow">Deep Dive</p>
+              <h3>Your main working area.</h3>
+              <p>
+                Based on what you tell us in onboarding, we build a comprehensive series of sessions specifically
+                tailored for you. Together, we find out how your past and desires shaped your personality, journey, and
+                current future direction.
+              </p>
+              <p>
+                As the sessions progress, we keep using all your past conversations to further adapt your future
+                sessions and shape your LifeTask map and Skills Board.
+              </p>
+            </div>
+            <figure class="product-phone">
+              <img class="phone-image" src="./assets/mobile-discovery-phone-clean.png" alt="LifeTask deep dive screen" />
+            </figure>
+          </article>
+
+          <article class="product-row product-row-reverse">
+            <div class="product-copy">
+              <p class="eyebrow">LifeTask Map</p>
+              <h3>A continuously updating compass.</h3>
+              <p>
+                Here you will have your LifeTask map, personality overview, and specific traits. The LifeTask map is a
+                continuously updating compass where we use what you told us to create a starting hypothesis for your life.
+              </p>
+              <p>
+                We take into consideration the challenges you face, the emerging direction, and the pillars guiding your
+                actions so we can begin helping you toward the best-fit path.
+              </p>
+              <p>
+                The personality overview is meant to offer deeper insight into who you are, coupled with the traits we
+                extracted so you can clearly see how they define your character.
+              </p>
+            </div>
+            <div class="product-phone-pair" aria-label="LifeTask map and overview previews">
+              <figure class="product-phone">
                 <img class="phone-image" src="./assets/mobile-direction-phone-clean.png" alt="LifeTask map screen" />
-                <figcaption>Lifetask map</figcaption>
               </figure>
-              <figure class="phone-shot phone-shot-right">
-                <img class="phone-image" src="./assets/mobile-skill-map-phone-clean.png" alt="LifeTask skills board screen" />
-                <figcaption>Skills Board</figcaption>
+              <figure class="product-phone product-phone-secondary">
+                <img
+                  class="phone-image"
+                  src="./assets/mobile-overview-traits-phone-clean.png"
+                  alt="LifeTask personality overview and traits screen"
+                />
               </figure>
             </div>
-            <div class="phone-dots" aria-hidden="true">
-              <span class="is-active"></span>
-              <span></span>
-              <span></span>
+          </article>
+
+          <article class="product-row">
+            <div class="product-copy">
+              <p class="eyebrow">Skills Board</p>
+              <h3>Build the strengths your path needs.</h3>
+              <p>
+                The Skills Board is the place where we turn your reflection into actionable steps, so we can start
+                building the strengths you need to adapt to your new path.
+              </p>
+              <p>
+                We will recommend skills we think are important based on what you told us, but you can also add, remove,
+                or edit any skill you want, and we will take that into consideration for your learning journey.
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-shell split-section">
-        <div class="section-intro">
-          <p class="eyebrow">What the app does</p>
-          <h2>Uncover the drives, patterns, and strengths behind the work that fits you.</h2>
-        </div>
-        <div class="feature-grid">
-          <article>
-            <span class="feature-number">01</span>
-            <h3>Begin with lived evidence</h3>
-            <p>LifeTask turns memories, interests, frustrations, and pivotal moments into evidence for what repeatedly pulls you forward.</p>
-          </article>
-          <article>
-            <span class="feature-number">02</span>
-            <h3>Trace recurring drives</h3>
-            <p>Your answers reveal the themes that keep showing up: the work you return to, the friction you outgrow, and the strengths you rely on.</p>
-          </article>
-          <article>
-            <span class="feature-number">03</span>
-            <h3>Surface usable strengths</h3>
-            <p>Real examples become skill signals you can recognize, strengthen, and use to move toward better-fit work.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="how" class="section-shell process-section">
-        <div class="section-intro">
-          <p class="eyebrow">How it works</p>
-          <h2>Focused prompts that build into a sharper map.</h2>
-        </div>
-        <div class="steps">
-          <article>
-            <span>01</span>
-            <h3>Start from experience</h3>
-            <p>Each step starts with something concrete: a memory, a tension, a recurring pull, or a kind of work you keep coming back to.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Go deeper when it matters</h3>
-            <p>When an answer has a useful signal inside it, LifeTask asks a focused follow-up to make the pattern easier to see.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Refine your fit over time</h3>
-            <p>As new evidence comes in, your Lifetask map becomes more specific about your drives, strengths, frictions, and possible fit.</p>
+            <figure class="product-phone">
+              <img class="phone-image" src="./assets/mobile-skill-map-phone-clean.png" alt="LifeTask skills board screen" />
+            </figure>
           </article>
         </div>
       </section>
@@ -131,23 +133,20 @@
       <section id="who" class="section-shell audience-section">
         <div>
           <p class="eyebrow">Who it is for</p>
-          <h2>For people who want to understand their deeper drives and best-fit work.</h2>
+          <h2>For people trying to figure out what kind of work fits them best.</h2>
         </div>
         <div class="audience-list">
-          <p>Students and early-career builders looking for the work that actually pulls their attention.</p>
-          <p>Professionals who feel capable, but not fully used, and want to understand what kind of work fits better.</p>
-          <p>Founders, creators, and independent workers looking for the themes they can keep building around.</p>
+          <p>Students and early-career professionals exploring careers that genuinely interest them.</p>
+          <p>Professionals who feel capable, but unsure whether they are in the right role or direction.</p>
+          <p>Founders, creators, and independent workers looking to build around work they naturally enjoy.</p>
         </div>
       </section>
 
       <section class="final-cta">
         <div class="section-shell final-cta-inner">
           <p class="eyebrow">Trylifetask.com</p>
-          <h2>Begin with lived evidence. Let the deeper pattern come into focus.</h2>
-          <p>
-            LifeTask is being built for people who want to uncover their recurring drives, usable strengths, and better-fit work.
-          </p>
-          <a class="button primary" href="mailto:hello@trylifetask.com?subject=LifeTask early access">Get early access</a>
+          <h2>Find your Life's Task.</h2>
+          <a class="button primary" href="https://app.trylifetask.com">Get early access</a>
         </div>
       </section>
     </main>
@@ -156,21 +155,21 @@
       <div class="section-shell footer-inner">
         <div class="footer-contact">
           <p class="footer-label">Contact</p>
-          <p>hello@trylifetask.com</p>
-        </div>
-        <div class="footer-contact">
-          <p class="footer-label">Support</p>
-          <p>support@trylifetask.com</p>
+          <p><a href="mailto:dragos@trylifetask.com">dragos@trylifetask.com</a></p>
         </div>
         <div class="footer-contact">
           <p class="footer-label">Company</p>
-          <p>Business address placeholder</p>
+          <p>LifeTask</p>
+        </div>
+        <div class="footer-contact">
+          <p class="footer-label">Business</p>
+          <p><a href="mailto:georg@trylifetask.com">georg@trylifetask.com</a></p>
         </div>
       </div>
     </footer>
     <script>
       const revealTargets = document.querySelectorAll(
-        '.overview-copy article, .phone-preview, .phone-shot, .split-section > .section-intro, .feature-grid article, .process-section > .section-intro, .steps article, .audience-section > .section-intro, .audience-list p, .final-cta-inner'
+        '.mission-copy, .product-story-heading, .product-row, .audience-list p, .final-cta-inner'
       );
 
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
