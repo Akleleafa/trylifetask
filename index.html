@@ -32,8 +32,8 @@
         <div class="hero-inner">
           <h1>From confusion to clarity. Discover your LifeTask.</h1>
           <p class="hero-lede">
-            LifeTask guides you through focused reflection so, with your past experiences and recurring patterns, we can
-            unravel the life path that fits you best, then use that to build your skills and learning path.
+            LifeTask offers guided reflection to help you better understand your past and recurring patterns, identify
+            your intrinsic motivations and interests, and discover a clearer path forward.
           </p>
           <div class="hero-actions">
             <a class="hero-down-arrow" href="#app" aria-label="Scroll to the app section"></a>
@@ -41,92 +41,68 @@
         </div>
       </section>
 
-      <section id="app" class="editorial-overview">
-        <div class="section-shell mission-copy">
-          <p>
-            Most people live a reactionary life, guided by shallow principles that lead them into jobs or paths that
-            never truly fit them, creating dissatisfaction and a lack of energy and motivation.
-          </p>
-          <p>
-            Our mission is to help you rediscover the true direction that may have been buried deep down, so we can help
-            you rebuild a viable path that actually makes you happy and motivated.
-          </p>
-        </div>
-      </section>
-
-      <section class="product-story">
-        <div class="section-shell">
+      <section id="app" class="product-story" aria-labelledby="product-walkthrough-title">
+        <div class="section-shell product-walkthrough">
           <div class="product-story-heading">
-            <h2>Here is how we help.</h2>
+            <h2 id="product-walkthrough-title">Here is how we help.</h2>
           </div>
 
-          <article class="product-row">
-            <div class="product-copy">
-              <p class="eyebrow">Deep Dive</p>
-              <h3>Your main working area.</h3>
-              <p>
-                Based on what you tell us in onboarding, we build a comprehensive series of sessions specifically
-                tailored for you. Together, we find out how your past and desires shaped your personality, journey, and
-                current future direction.
-              </p>
-              <p>
-                As the sessions progress, we keep using all your past conversations to further adapt your future
-                sessions and shape your LifeTask map and Skills Board.
-              </p>
+          <div class="walkthrough-layout">
+            <div class="walkthrough-visual" aria-hidden="true">
+              <div class="walkthrough-stack">
+                <figure class="product-phone walkthrough-phone walkthrough-stack-item is-active" data-screen-index="0">
+                  <img class="phone-image" src="./assets/mobile-discovery-phone-clean.png" alt="" />
+                </figure>
+                <figure class="product-phone walkthrough-phone walkthrough-stack-item" data-screen-index="1">
+                  <img class="phone-image" src="./assets/mobile-skill-map-phone-clean.png" alt="" />
+                </figure>
+                <figure class="product-phone walkthrough-phone walkthrough-stack-item" data-screen-index="2">
+                  <img class="phone-image" src="./assets/mobile-direction-phone-clean.png" alt="" />
+                </figure>
+              </div>
             </div>
-            <figure class="product-phone">
-              <img class="phone-image" src="./assets/mobile-discovery-phone-clean.png" alt="LifeTask deep dive screen" />
-            </figure>
-          </article>
 
-          <article class="product-row product-row-reverse">
-            <div class="product-copy">
-              <p class="eyebrow">LifeTask Map</p>
-              <h3>A continuously updating compass.</h3>
-              <p>
-                Here you will have your LifeTask map, personality overview, and specific traits. The LifeTask map is a
-                continuously updating compass where we use what you told us to create a starting hypothesis for your life.
-              </p>
-              <p>
-                We take into consideration the challenges you face, the emerging direction, and the pillars guiding your
-                actions so we can begin helping you toward the best-fit path.
-              </p>
-              <p>
-                The personality overview is meant to offer deeper insight into who you are, coupled with the traits we
-                extracted so you can clearly see how they define your character.
-              </p>
-            </div>
-            <div class="product-phone-pair" aria-label="LifeTask map and overview previews">
-              <figure class="product-phone">
-                <img class="phone-image" src="./assets/mobile-direction-phone-clean.png" alt="LifeTask map screen" />
-              </figure>
-              <figure class="product-phone product-phone-secondary">
-                <img
-                  class="phone-image"
-                  src="./assets/mobile-overview-traits-phone-clean.png"
-                  alt="LifeTask personality overview and traits screen"
-                />
-              </figure>
-            </div>
-          </article>
+            <div class="walkthrough-steps">
+              <article
+                class="walkthrough-step is-active"
+                data-screen-index="0"
+                data-screen="./assets/mobile-discovery-phone-clean.png"
+                data-screen-alt="LifeTask deep dive screen"
+              >
+                <h3>Deep Dive</h3>
+                <p>Discover how your experiences have shaped your personality, skills, and intrinsic interests.</p>
+                <figure class="step-phone-mobile" aria-hidden="true">
+                  <img class="phone-image" src="./assets/mobile-discovery-phone-clean.png" alt="" />
+                </figure>
+              </article>
 
-          <article class="product-row">
-            <div class="product-copy">
-              <p class="eyebrow">Skills Board</p>
-              <h3>Build the strengths your path needs.</h3>
-              <p>
-                The Skills Board is the place where we turn your reflection into actionable steps, so we can start
-                building the strengths you need to adapt to your new path.
-              </p>
-              <p>
-                We will recommend skills we think are important based on what you told us, but you can also add, remove,
-                or edit any skill you want, and we will take that into consideration for your learning journey.
-              </p>
+              <article
+                class="walkthrough-step"
+                data-screen-index="1"
+                data-screen="./assets/mobile-skill-map-phone-clean.png"
+                data-screen-alt="LifeTask Skills Board screen"
+              >
+                <h3>Create a Skill Board</h3>
+                <p>Understand your current skills, current gaps, and future skills you want to develop.</p>
+                <figure class="step-phone-mobile" aria-hidden="true">
+                  <img class="phone-image" src="./assets/mobile-skill-map-phone-clean.png" alt="" />
+                </figure>
+              </article>
+
+              <article
+                class="walkthrough-step"
+                data-screen-index="2"
+                data-screen="./assets/mobile-direction-phone-clean.png"
+                data-screen-alt="LifeTask map screen"
+              >
+                <h3>LifeTask Map</h3>
+                <p>Your evolving LifeTask map reveals your direction, personality, traits, motivations, and path.</p>
+                <figure class="step-phone-mobile" aria-hidden="true">
+                  <img class="phone-image" src="./assets/mobile-direction-phone-clean.png" alt="" />
+                </figure>
+              </article>
             </div>
-            <figure class="product-phone">
-              <img class="phone-image" src="./assets/mobile-skill-map-phone-clean.png" alt="LifeTask skills board screen" />
-            </figure>
-          </article>
+          </div>
         </div>
       </section>
 
@@ -137,8 +113,25 @@
         </div>
         <div class="audience-list">
           <p>Students and early-career professionals exploring careers that genuinely interest them.</p>
-          <p>Professionals who feel capable, but unsure whether they are in the right role or direction.</p>
+          <p>Experienced professionals who feel capable, but unsure whether they are in the right role or direction.</p>
           <p>Founders, creators, and independent workers looking to build around work they naturally enjoy.</p>
+        </div>
+      </section>
+
+      <section class="editorial-overview">
+        <div class="section-shell mission-copy">
+          <p>
+            Most people don’t live life according to their own principles. They follow expectations, chase status, or
+            simply take the next available path.
+          </p>
+          <p>
+            Then one day they wake up feeling exhausted and disconnected, wondering how they ended up building a career
+            that feels wrong. Some people call it burnout, others career confusion. We believe that you simply lost sight
+            of your Life’s Task.
+          </p>
+          <p>
+            Our mission is to help you rediscover it.
+          </p>
         </div>
       </section>
 
@@ -169,7 +162,7 @@
     </footer>
     <script>
       const revealTargets = document.querySelectorAll(
-        '.mission-copy, .product-story-heading, .product-row, .audience-list p, .final-cta-inner'
+        '.mission-copy, .product-story-heading, .walkthrough-step, .audience-list p, .final-cta-inner'
       );
 
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -215,6 +208,71 @@
         phoneTrack.addEventListener('scroll', () => requestAnimationFrame(setActivePhone), { passive: true });
         window.addEventListener('resize', setActivePhone);
         setActivePhone();
+      }
+
+      const walkthroughStackItems = [...document.querySelectorAll('.walkthrough-stack-item')];
+      const walkthroughSteps = [...document.querySelectorAll('.walkthrough-step')];
+
+      if (walkthroughStackItems.length && walkthroughSteps.length) {
+        const setActiveStep = (step) => {
+          const nextIndex = Number(step.dataset.screenIndex || 0);
+
+          walkthroughSteps.forEach((item) => item.classList.toggle('is-active', item === step));
+          walkthroughStackItems.forEach((item, index) => {
+            item.classList.toggle('is-active', index === nextIndex);
+            item.classList.toggle('is-before', index < nextIndex);
+            item.classList.toggle('is-after', index > nextIndex);
+          });
+        };
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          walkthroughSteps.forEach((step) => {
+            step.addEventListener('mouseenter', () => setActiveStep(step));
+            step.addEventListener('focusin', () => setActiveStep(step));
+          });
+        } else {
+          const updateActiveStepFromViewport = () => {
+            const viewportAnchor = window.innerHeight * 0.48;
+            let closestStep = walkthroughSteps[0];
+            let closestDistance = Number.POSITIVE_INFINITY;
+
+            walkthroughSteps.forEach((step) => {
+              const rect = step.getBoundingClientRect();
+              const stepCenter = rect.top + rect.height / 2;
+              const distance = Math.abs(stepCenter - viewportAnchor);
+              if (distance < closestDistance) {
+                closestDistance = distance;
+                closestStep = step;
+              }
+            });
+
+            if (closestStep) {
+              setActiveStep(closestStep);
+            }
+          };
+
+          let activeFrame = 0;
+          const scheduleActiveStepUpdate = () => {
+            if (activeFrame) {
+              return;
+            }
+
+            activeFrame = window.requestAnimationFrame(() => {
+              activeFrame = 0;
+              updateActiveStepFromViewport();
+            });
+          };
+
+          const stepObserver = new IntersectionObserver(
+            () => scheduleActiveStepUpdate(),
+            { threshold: [0, 0.25, 0.5, 0.75], rootMargin: '-12% 0px -12% 0px' }
+          );
+
+          walkthroughSteps.forEach((step) => stepObserver.observe(step));
+          window.addEventListener('scroll', scheduleActiveStepUpdate, { passive: true });
+          window.addEventListener('resize', scheduleActiveStepUpdate);
+          updateActiveStepFromViewport();
+        }
       }
     </script>
   </body>
