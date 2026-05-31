@@ -2743,7 +2743,8 @@ main > .editorial-overview {
 /* Active phone must always occupy the same front slot, regardless of which screen it is. */
 .walkthrough-stack-item.is-active,
 .walkthrough-stack-item:nth-child(2).is-active,
-.walkthrough-stack-item:nth-child(3).is-active {
+.walkthrough-stack-item:nth-child(3).is-active,
+.walkthrough-stack-item:nth-child(4).is-active {
   z-index: 5;
   opacity: 1;
   filter: drop-shadow(0 30px 54px rgba(38, 55, 68, 0.18));
@@ -2757,5 +2758,75 @@ main > .editorial-overview {
 
   .walkthrough-steps {
     padding-bottom: clamp(360px, 42vh, 520px);
+  }
+}
+
+/* Website app previews use the same raw app screenshots inside onboarding-style phone chrome. */
+.product-phone {
+  position: relative;
+  width: min(100%, 346px);
+  aspect-ratio: 346 / 631;
+  margin: 0 auto;
+  padding: 5.49% 2.02% 2.6%;
+  border: 1px solid #1f2f3a;
+  border-radius: 34px;
+  background: #263744;
+  filter: drop-shadow(0 28px 48px rgba(38, 55, 68, 0.16));
+}
+
+.product-phone .phone-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  background: #f4efe8;
+}
+
+.phone-speaker-slot {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  width: 38px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateX(-50%);
+}
+
+.phone-camera-dot {
+  position: absolute;
+  top: 7px;
+  right: 36%;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.phone-home-indicator {
+  display: block;
+  width: 46px;
+  height: 3px;
+  margin: 6px auto 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.44);
+}
+
+.walkthrough-stack-item:nth-child(4),
+.walkthrough-stack-item.is-after:nth-child(4) {
+  z-index: 1;
+  filter: grayscale(1) saturate(0) contrast(0.5) brightness(1.38)
+    drop-shadow(0 14px 20px rgba(26, 37, 47, 0.08));
+  transform: translate(88px, 70px) scale(0.9);
+}
+
+@media (max-width: 680px) {
+  .step-phone-mobile.product-phone {
+    width: min(76vw, 282px);
+    border-radius: 28px;
+  }
+
+  .step-phone-mobile.product-phone .phone-image {
+    border-radius: 22px;
   }
 }
