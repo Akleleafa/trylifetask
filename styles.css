@@ -2752,19 +2752,41 @@ main > .editorial-overview {
 }
 
 @media (min-width: 981px) {
+  .walkthrough-visual {
+    position: relative;
+    top: auto;
+    align-self: stretch;
+    min-height: auto;
+    place-items: start center;
+  }
+
+  .walkthrough-stack {
+    position: sticky;
+    top: 136px;
+    height: 690px;
+    align-self: start;
+    justify-self: center;
+  }
+
+  .walkthrough-stack-item {
+    top: 0;
+    left: 50%;
+    margin-left: -165px;
+  }
+
   .walkthrough-layout {
-    padding-bottom: 0;
+    padding-bottom: clamp(260px, 30vh, 420px);
   }
 
   .walkthrough-steps {
-    padding-bottom: clamp(360px, 42vh, 520px);
+    padding-bottom: clamp(300px, 36vh, 460px);
   }
 }
 
 /* Website app previews use the same raw app screenshots inside onboarding-style phone chrome. */
 .product-phone {
   position: relative;
-  width: min(100%, 346px);
+  width: min(100%, 330px);
   aspect-ratio: 346 / 631;
   margin: 0 auto;
   padding: 5.49% 2.02% 2.6%;
@@ -2810,6 +2832,15 @@ main > .editorial-overview {
   margin: 6px auto 0;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.44);
+}
+
+@media (min-width: 981px) {
+  .walkthrough-stack-item.product-phone {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0 0 0 -165px;
+  }
 }
 
 .walkthrough-stack-item:nth-child(4),
