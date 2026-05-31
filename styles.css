@@ -2794,11 +2794,11 @@ main > .editorial-overview {
   }
 
   .walkthrough-layout {
-    padding-bottom: clamp(260px, 30vh, 420px);
+    padding-bottom: clamp(380px, 44vh, 600px);
   }
 
   .walkthrough-steps {
-    padding-bottom: clamp(300px, 36vh, 460px);
+    padding-bottom: clamp(560px, 62vh, 780px);
   }
 }
 

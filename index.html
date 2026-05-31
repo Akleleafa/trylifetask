@@ -252,6 +252,7 @@
 
       const walkthroughStackItems = [...document.querySelectorAll('.walkthrough-stack-item')];
       const walkthroughSteps = [...document.querySelectorAll('.walkthrough-step')];
+      const walkthroughStack = document.querySelector('.walkthrough-stack');
 
       if (walkthroughStackItems.length && walkthroughSteps.length) {
         const setActiveStep = (step) => {
@@ -272,12 +273,22 @@
           });
         } else {
           const updateActiveStepFromViewport = () => {
-            const viewportAnchor = window.innerHeight * 0.54;
+            const activePhone =
+              walkthroughStackItems.find((item) => item.classList.contains('is-active')) || walkthroughStackItems[0];
+            const phoneRect = activePhone?.getBoundingClientRect();
+            const stackRect = walkthroughStack?.getBoundingClientRect();
+            const viewportAnchor =
+              phoneRect && phoneRect.height
+                ? phoneRect.top + phoneRect.height * 0.5
+                : stackRect && stackRect.height
+                  ? stackRect.top + Math.min(stackRect.height, window.innerHeight - stackRect.top) * 0.5
+                  : window.innerHeight * 0.5;
             let activeStep = walkthroughSteps[0];
 
             walkthroughSteps.forEach((step) => {
               const rect = step.getBoundingClientRect();
-              if (rect.top <= viewportAnchor) {
+              const stepMidpoint = rect.top + rect.height * 0.5;
+              if (stepMidpoint <= viewportAnchor) {
                 activeStep = step;
               }
             });
