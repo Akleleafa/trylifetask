@@ -1,0 +1,74 @@
+/* Generated from LifeTask lib/palette.json. UI colours share the app palette. */
+:root{
+  --lt-blue:#2C587D;
+  --lt-blue-rgb:44 88 125;
+  --lt-blue-interactive:#35668F;
+  --lt-blue-interactive-rgb:53 102 143;
+  --lt-ink:#23364A;
+  --lt-ink-rgb:35 54 74;
+  --lt-muted:#62708D;
+  --lt-muted-rgb:98 112 141;
+  --lt-cream:#FCFAF6;
+  --lt-cream-rgb:252 250 246;
+  --lt-card:#FFFDF8;
+  --lt-card-rgb:255 253 248;
+  --lt-paper:#FFFEFA;
+  --lt-paper-rgb:255 254 250;
+  --lt-gold:#E6A434;
+  --lt-gold-rgb:230 164 52;
+  --lt-gold-bright:#F2B84B;
+  --lt-gold-bright-rgb:242 184 75;
+  --lt-orange:#F47F24;
+  --lt-orange-rgb:244 127 36;
+  --lt-line:#E6E2DA;
+  --lt-line-rgb:230 226 218;
+  --lt-blue-soft:#EDF4FF;
+  --lt-blue-soft-rgb:237 244 255;
+  --lt-gold-soft:#FFF5DF;
+  --lt-gold-soft-rgb:255 245 223;
+  --lt-orange-soft:#FFF0E5;
+  --lt-orange-soft-rgb:255 240 229;
+  --lt-orange-text:#AA4617;
+  --lt-orange-text-rgb:170 70 23;
+  --lt-gold-text:#805B19;
+  --lt-gold-text-rgb:128 91 25;
+  --lt-success:#23845B;
+  --lt-success-rgb:35 132 91;
+  --lt-danger:#A33D36;
+  --lt-danger-rgb:163 61 54;
+  --lt-white:#FFFFFF;
+  --lt-white-rgb:255 255 255;
+  --lt-black:#000000;
+  --lt-black-rgb:0 0 0;
+  --lt-brand-blue:#064AB1;
+  --lt-brand-blue-rgb:6 74 177;
+  --lt-brand-sky:#9BC8FA;
+  --lt-brand-sky-rgb:155 200 250;
+  --lt-brand-orange:#FF8B2D;
+  --lt-brand-orange-rgb:255 139 45;
+  --lt-brand-yellow:#FFD255;
+  --lt-brand-yellow-rgb:255 210 85;
+  --lt-brand-ink:#111315;
+  --lt-brand-ink-rgb:17 19 21;
+  --lt-transcript-inactive:#9AA5AE;
+  --lt-transcript-inactive-rgb:154 165 174;
+}
+
+/* Derived UI surfaces from app lib/palette.ts, using the same channel rounding. */
+:root{
+--lt-secondary-text:#596884;
+--lt-assistant:#F3EFE7;
+--lt-border:#D3D5D5;
+--lt-disabled:#AAB1BE;
+--lt-blue-border:#BFCFE0;
+--lt-blue-wash:#E4E8EA;
+--lt-blue-selected:#CED8DE;
+--lt-orange-border:#E9C4AF;
+--lt-gold-border:#DFCFAE;
+--lt-success-soft:#EBF2EA;
+--lt-success-border:#B2D3C1;
+--lt-danger-soft:#F8EEE8;
+--lt-danger-border:#DFBAB4;
+--lt-sky:#ADC2D8;
+--lt-sand:#F8DEAF;
+}

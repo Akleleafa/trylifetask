@@ -1,0 +1,315 @@
+{
+  "source": "LifeTask app: lib/legal-documents.ts",
+  "contactEmail": "dragos@trylifetask.com",
+  "documents": [
+    {
+      "kind": "terms",
+      "title": "Terms of Use",
+      "description": "These terms govern your use of LifeTask, including its AI-guided reflection, learning, and subscription features.",
+      "updatedAt": "July 24, 2026",
+      "sections": [
+        {
+          "title": "1. Accepting these terms",
+          "paragraphs": [
+            "By creating an account or using LifeTask, you agree to these Terms and the Privacy Policy. LifeTask is provided by the LifeTask team (“LifeTask,” “we,” and “us”). If you do not agree, do not use the service. Questions can be sent to dragos@trylifetask.com."
+          ]
+        },
+        {
+          "title": "2. Eligibility and accounts",
+          "paragraphs": [
+            "You must be at least 13 to use LifeTask. If you are below the age at which you can legally agree to online-service terms where you live, a parent or legal guardian must review and accept these Terms for you.",
+            "Provide accurate account information, keep your sign-in credentials secure, and tell us promptly if you believe your account has been misused. You are responsible for activity performed through your account unless applicable law says otherwise."
+          ]
+        },
+        {
+          "title": "3. What LifeTask provides",
+          "paragraphs": [
+            "LifeTask offers guided reflection, personalized profiles and maps, AI-generated courses and sessions, progress tools, reminders, and related educational features. Some features, models, quotas, free access, and content availability may change as the service develops.",
+            "LifeTask may generate sessions asynchronously. Network, provider, device, or service conditions can delay or interrupt generation, and we do not guarantee that every generation will complete or remain available forever."
+          ]
+        },
+        {
+          "title": "4. Your content and AI-generated material",
+          "paragraphs": [
+            "You retain the rights you have in the prompts, reflections, feedback, and other content you submit. You give LifeTask a limited, worldwide license to host, copy, process, transmit, and display that content only as reasonably needed to operate, personalize, secure, support, and improve the service.",
+            "You are responsible for having the right to submit your content and for reviewing generated material before relying on it. Rights in AI-generated material can vary by law and circumstance; LifeTask does not promise that an output is unique, protectable, or free from third-party rights."
+          ]
+        },
+        {
+          "title": "5. Important AI and professional-advice notice",
+          "paragraphs": [
+            "LifeTask uses automated systems. Outputs can be incomplete, inaccurate, outdated, or unsuitable for your circumstances. Independently assess important information and decisions.",
+            "LifeTask is for general education and self-reflection. It is not medical, psychological, therapeutic, legal, financial, employment, or other professional advice, and it is not an emergency service. Seek a qualified professional when you need expert advice or urgent help."
+          ]
+        },
+        {
+          "title": "6. Subscriptions, renewal, and refunds",
+          "bullets": [
+            "Paid plans may be offered monthly or yearly and automatically renew unless you cancel through the platform that processed the purchase before its renewal deadline.",
+            "The price, billing period, trial or offer terms, and taxes shown by Apple, Google, Stripe, or the applicable checkout provider at purchase govern that transaction.",
+            "You can restore eligible store purchases from LifeTask. Refunds, cancellations, billing disputes, and price changes are handled under the applicable platform rules and mandatory law.",
+            "Deleting LifeTask or uninstalling the app does not cancel a subscription. An actively renewing subscription must be canceled before the LifeTask account can be deleted."
+          ],
+          "links": [
+            {
+              "label": "Manage Apple subscriptions",
+              "url": "https://apps.apple.com/account/subscriptions"
+            },
+            {
+              "label": "Manage Google Play subscriptions",
+              "url": "https://play.google.com/store/account/subscriptions"
+            }
+          ]
+        },
+        {
+          "title": "7. Acceptable use",
+          "paragraphs": [
+            "You must not:"
+          ],
+          "bullets": [
+            "Use LifeTask unlawfully, to harm others, or to create or distribute abusive, deceptive, infringing, or malicious material.",
+            "Probe, bypass, overload, reverse engineer, or interfere with security, access controls, quotas, billing, or service operation, except where the law expressly permits it.",
+            "Use automated means to scrape the service, resell access, impersonate another person, or access another user’s account or information.",
+            "Submit content you do not have the right to use or attempt to make LifeTask produce content that violates law or another person’s rights."
+          ]
+        },
+        {
+          "title": "8. LifeTask property",
+          "paragraphs": [
+            "LifeTask and its software, design, branding, interfaces, and service content are owned by or licensed to us and are protected by applicable intellectual-property laws. We grant you a personal, limited, revocable, non-exclusive, non-transferable right to use the service under these Terms."
+          ]
+        },
+        {
+          "title": "9. Availability, changes, and suspension",
+          "paragraphs": [
+            "We may maintain, update, limit, or discontinue features, and the service may sometimes be unavailable. We may suspend or terminate access when reasonably necessary to address abuse, fraud, security, legal requirements, non-payment, or a material breach of these Terms. Where practical and required, we will provide notice."
+          ]
+        },
+        {
+          "title": "10. Account deletion and termination",
+          "paragraphs": [
+            "You may stop using LifeTask at any time. To delete your account, first cancel any actively renewing subscription, wait for the updated status to reach LifeTask, and then use Account settings. Account deletion is permanent and most content cannot be recovered.",
+            "Sections that by their nature should continue—such as payment obligations, intellectual-property terms, disclaimers, limits of liability, and dispute provisions—survive termination."
+          ],
+          "links": [
+            {
+              "label": "Account deletion instructions",
+              "url": "/delete-account"
+            }
+          ]
+        },
+        {
+          "title": "11. Disclaimers and responsibility",
+          "paragraphs": [
+            "To the maximum extent permitted by law, LifeTask is provided “as is” and “as available.” We do not guarantee uninterrupted operation, specific outcomes, or the accuracy, completeness, uniqueness, or fitness of generated content.",
+            "To the maximum extent permitted by law, LifeTask is not responsible for indirect, incidental, special, consequential, or punitive losses arising from use of the service. Nothing in these Terms excludes warranties, consumer rights, remedies, or liability that cannot lawfully be excluded or limited."
+          ]
+        },
+        {
+          "title": "12. Store terms and applicable law",
+          "paragraphs": [
+            "Your use may also be subject to the terms of Apple, Google, or another distribution or payment platform. For apps obtained through Apple, Apple’s Standard Licensed Application End User License Agreement applies unless a different valid agreement is presented in App Store Connect.",
+            "These Terms are governed by applicable law, including any mandatory consumer protections where you live. Please contact us first so we can try to resolve a concern informally; this does not limit any right to contact a regulator, consumer authority, or court."
+          ],
+          "links": [
+            {
+              "label": "Apple Standard Licensed Application End User License Agreement",
+              "url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+            }
+          ]
+        },
+        {
+          "title": "13. Changes and contact",
+          "paragraphs": [
+            "We may update these Terms as LifeTask changes. We will post the updated date and provide additional notice when required. Continued use after an update takes effect means you accept the revised Terms. Contact dragos@trylifetask.com with questions."
+          ],
+          "links": [
+            {
+              "label": "Email dragos@trylifetask.com",
+              "url": "mailto:dragos@trylifetask.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "privacy",
+      "title": "Privacy Policy",
+      "description": "This policy explains what information LifeTask handles, why we use it, and the choices available to you.",
+      "updatedAt": "August 1, 2026",
+      "sections": [
+        {
+          "title": "1. Who we are",
+          "paragraphs": [
+            "LifeTask provides AI-guided self-development and educational tools. In this policy, “LifeTask,” “we,” and “us” refer to the LifeTask service and the team that operates it. For privacy questions or requests, contact dragos@trylifetask.com."
+          ]
+        },
+        {
+          "title": "2. Information we handle",
+          "paragraphs": [
+            "The information we handle depends on how you use LifeTask. It may include:"
+          ],
+          "bullets": [
+            "Account and identity information, such as your user ID, email address, display name, authentication provider, and account session data. If you use Apple or Google sign-in, those providers share information according to your choices and their policies.",
+            "Reflection and learning information, such as your age range, goals, priorities, onboarding answers, course topics, free-text responses, feedback, lesson progress, listening position, and generated plans, profiles, insights, or course content.",
+            "Purchase and access information, such as product, store, entitlement, subscription, renewal, and transaction or customer identifiers. Apple, Google, or Stripe processes the full payment details; LifeTask receives the information needed to grant and support access.",
+            "Technical, usage, and support information, such as app-scoped playback or subscription identifiers, device platform, app version, feature events, timestamps, crash-related records, privacy-minimized reliability diagnostics, AI operation status, token usage, latency, categorized errors, and messages you send to support.",
+            "Preferences and device-local data, such as reminder and notification settings, authentication sessions, onboarding drafts, and downloaded course audio or artwork."
+          ]
+        },
+        {
+          "title": "3. How we use information",
+          "bullets": [
+            "Provide, personalize, and synchronize LifeTask, including reflections, learning sessions, course generation, text-to-speech, progress, and reminders.",
+            "Create automated summaries, patterns, strengths, skills, and other personalized educational or self-reflection content.",
+            "Authenticate accounts, restore purchases, verify entitlements, process account deletion, and provide customer support.",
+            "Protect LifeTask from abuse and fraud, diagnose failures, measure reliability, and improve features and safety.",
+            "Comply with legal, accounting, tax, and dispute-resolution obligations."
+          ],
+          "closingParagraphs": [
+            "Where data-protection law requires a legal basis, we rely on performing our agreement with you, our legitimate interests in operating and securing LifeTask, your consent where we ask for it, and compliance with legal obligations."
+          ]
+        },
+        {
+          "title": "4. AI-assisted features",
+          "paragraphs": [
+            "LifeTask sends the information needed for a requested AI feature—such as relevant prompts, responses, course topics, and personalization context—to service providers that generate text or audio. These systems process information automatically and their outputs can be incomplete or inaccurate.",
+            "Before LifeTask sends this information to OpenAI or Inworld, the app asks for your AI data-sharing permission. You can withdraw that permission in Account at any time. New AI processing and unfinished generation will pause, while content already generated remains available.",
+            "Please avoid submitting highly sensitive information that is not necessary for your use of LifeTask. LifeTask stores technical AI records such as status, provider, model, input hashes, usage, latency, and categorized errors. The privacy-minimized operational diagnostic event store does not retain prompts, generated content, course topics, transcripts, URLs, raw exception messages, or stack traces."
+          ]
+        },
+        {
+          "title": "5. Providers and other disclosures",
+          "paragraphs": [
+            "We disclose information only as needed to operate LifeTask, complete a transaction, protect the service, or comply with law. Current provider categories include:"
+          ],
+          "bullets": [
+            "Supabase for authentication, databases, storage, and server functions.",
+            "OpenAI for AI-assisted personalization and content generation, and Inworld for text-to-speech generation. LifeTask does not record or send your voice to Inworld.",
+            "RevenueCat for offerings, entitlements, purchase restoration, and subscription status.",
+            "Apple App Store, Google Play, and Stripe for authentication or purchases when you choose their services.",
+            "Resend for service emails, and Expo/EAS and other infrastructure providers for app delivery and hosting.",
+            "Professional advisers, authorities, or a successor to the service when reasonably necessary for legal, security, or business-transfer purposes."
+          ],
+          "closingParagraphs": [
+            "We do not sell or rent personal information, and the app does not use third-party advertising or behavioral-tracking SDKs. Our providers may process information in other countries under their applicable safeguards and terms."
+          ]
+        },
+        {
+          "title": "6. Retention and account deletion",
+          "paragraphs": [
+            "We keep information while your account is active and for as long as reasonably needed to provide LifeTask, maintain security and continuity, resolve disputes, and meet legal, billing, or accounting obligations. Retention varies by the type of information and the provider involved.",
+            "Privacy-minimized operational diagnostic events are kept for up to 30 days and then automatically deleted. They are deleted earlier when the associated account is deleted.",
+            "You can request deletion from Account settings. An actively renewing paid subscription must be canceled first, because deleting LifeTask does not cancel billing managed by Apple, Google, or Stripe. After the subscription status updates, you can retry deletion.",
+            "Deletion removes most account content, including the main profile, reflections, learning data, and generated-course records. We may retain limited hashed identifiers, sanitized billing references, quota records, and deletion metadata for fraud prevention, subscription recovery, support, disputes, and legal obligations. Providers may retain transaction or legal records under their own requirements. Backups are removed on their normal rotation schedule.",
+            "Downloaded or cached content may remain on a device until you remove it, the operating system clears it, or the app is uninstalled."
+          ],
+          "links": [
+            {
+              "label": "Read the account deletion instructions",
+              "url": "/delete-account"
+            }
+          ]
+        },
+        {
+          "title": "7. Security",
+          "paragraphs": [
+            "We use reasonable technical and organizational safeguards designed to protect information, including authenticated access controls and encrypted network connections. No online service can guarantee absolute security, so please use a strong password and protect access to your devices and accounts."
+          ]
+        },
+        {
+          "title": "8. Your choices and rights",
+          "paragraphs": [
+            "Depending on where you live, you may have rights to access, correct, export, delete, restrict, or object to certain processing of your personal information, and to withdraw consent where processing is based on consent. Use the controls in LifeTask or email dragos@trylifetask.com. We may need to verify your identity before completing a request.",
+            "You can control notifications in LifeTask and your device settings. You can also revoke Apple or Google account access through those providers, although doing so does not automatically delete your LifeTask account.",
+            "If you are in the European Economic Area, United Kingdom, or Switzerland, you may also complain to your local data-protection authority. In Romania, this is the National Supervisory Authority for Personal Data Processing (ANSPDCP)."
+          ],
+          "links": [
+            {
+              "label": "Romanian data-protection authority",
+              "url": "https://www.dataprotection.ro/"
+            }
+          ]
+        },
+        {
+          "title": "9. Children and teenagers",
+          "paragraphs": [
+            "LifeTask is not intended for children under 13. If local law requires an older age to consent to an online service, a parent or legal guardian must authorize use until that age. Minors should use LifeTask only with a parent or guardian’s permission and should avoid sharing unnecessary sensitive information."
+          ]
+        },
+        {
+          "title": "10. Changes and contact",
+          "paragraphs": [
+            "We may update this policy as LifeTask changes. We will post the updated date here and provide additional notice when required. Questions and privacy requests can be sent to dragos@trylifetask.com."
+          ],
+          "links": [
+            {
+              "label": "Email dragos@trylifetask.com",
+              "url": "mailto:dragos@trylifetask.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "delete-account",
+      "title": "Delete Your LifeTask Account",
+      "description": "You can permanently delete your LifeTask account and most associated content from inside the app.",
+      "updatedAt": "July 24, 2026",
+      "sections": [
+        {
+          "title": "Before you delete",
+          "paragraphs": [
+            "Deleting your LifeTask account does not cancel a subscription managed by Apple, Google, or Stripe. To prevent continued billing and preserve access to the account needed to manage a purchase, LifeTask requires you to cancel any actively renewing paid subscription before deletion."
+          ],
+          "bullets": [
+            "Apple: open iPhone or iPad Settings, tap your name, then Subscriptions.",
+            "Google Play: open Google Play, tap your profile, then Payments & subscriptions and Subscriptions.",
+            "Web billing: use Manage subscription in LifeTask to open the billing portal."
+          ],
+          "closingParagraphs": [
+            "After canceling, reopen LifeTask and allow the updated subscription status to sync. If LifeTask still reports an active renewal, contact us and we will help verify it."
+          ]
+        },
+        {
+          "title": "Delete in the app",
+          "bullets": [
+            "Sign in to the LifeTask account you want to delete.",
+            "Open Account from the app navigation.",
+            "Choose Delete account and review the confirmation message.",
+            "Confirm permanent deletion."
+          ],
+          "paragraphs": [
+            "If you cannot access the app, email dragos@trylifetask.com from the address associated with the account and use the subject “Account deletion request.” Never send us your password or full payment-card information. We may ask for limited information to verify account ownership."
+          ],
+          "links": [
+            {
+              "label": "Email an account deletion request",
+              "url": "mailto:dragos@trylifetask.com?subject=Account%20deletion%20request"
+            }
+          ]
+        },
+        {
+          "title": "What deletion removes",
+          "paragraphs": [
+            "Deletion removes the main LifeTask account and most associated content, including profile information, reflections, learning progress, and generated-course records. This action is permanent and the deleted content generally cannot be recovered.",
+            "We may keep limited hashed identifiers, sanitized billing references, quota records, and deletion metadata when needed for fraud prevention, subscription recovery, support, disputes, accounting, or legal obligations. Apple, Google, Stripe, and other providers may retain transaction records under their own policies and legal duties.",
+            "Downloaded or cached course content may remain on your device until you remove it, the operating system clears it, or you uninstall LifeTask."
+          ]
+        },
+        {
+          "title": "Need help?",
+          "paragraphs": [
+            "Contact dragos@trylifetask.com. Include the email address used for LifeTask and a short description of the issue, but do not include passwords or full payment details."
+          ],
+          "links": [
+            {
+              "label": "Email dragos@trylifetask.com",
+              "url": "mailto:dragos@trylifetask.com"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
