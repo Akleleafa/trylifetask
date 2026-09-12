@@ -1,0 +1,26 @@
+{
+  "mode": "built-in; model and quality not controlled; exploratory, not production A/B",
+  "runs": [
+    {
+      "id": "speaking-compact",
+      "title": "Speak with confidence",
+      "prompt": "Square adult editorial spot illustration in opaque colored ink and blunt dip-pen drawing. Use economical, angular, slightly uneven shapes. The drawing has lost-and-found contours: some edges have one thick mark, some a thin taper, others are left open. Faces are drawn with a handful of marks, not shaded portraits. Each eye is a small dark brush comma directly on skin-colored fill; the whites of the eyes are not drawn. Keep gaze readable through brow and head angle. Make the two faces distinct through jaw, nose, mouth placement and hair silhouette. Choose two local irregularities per person: an off-center mouth, an uneven hair edge, an unequal brow, or a fill ending short of a contour. These are deliberate drawing choices, not paper grain or random scribbles. Keep hands and object contact physically plausible. Several flat local colors against white negative space. No gradient shading, surface noise, glossy highlights, readable text, decorative filler or 3D rendering.\n\nScene: A middle-aged woman with short dark curly hair wearing a rust-red blouse speaks into a handheld microphone. Seen waist-up in three-quarter view, she looks toward two listeners cropped at the right edge, one in profile. Her free hand makes a relaxed explanatory gesture. A broad cobalt stage panel and a single orange stool give the scene its setting. Faces clearly visible, natural attentive expressions."
+    },
+    {
+      "id": "negotiation-compact",
+      "title": "The art of negotiation",
+      "prompt": "Square adult editorial spot illustration in opaque colored ink and blunt dip-pen drawing. Use economical, angular, slightly uneven shapes. The drawing has lost-and-found contours: some edges have one thick mark, some a thin taper, others are left open. Faces are drawn with a handful of marks, not shaded portraits. Each eye is a small dark brush comma directly on skin-colored fill; the whites of the eyes are not drawn. Keep gaze readable through brow and head angle. Make the two faces distinct through jaw, nose, mouth placement and hair silhouette. Choose two local irregularities per person: an off-center mouth, an uneven hair edge, an unequal brow, or a fill ending short of a contour. These are deliberate drawing choices, not paper grain or random scribbles. Keep hands and object contact physically plausible. Several flat local colors against white negative space. No gradient shading, surface noise, glossy highlights, readable text, decorative filler or 3D rendering.\n\nScene: Two adult colleagues negotiate across a small round table, seen from a slightly elevated three-quarter angle. A bald dark-skinned man in a plum shirt listens while a woman with a straight chin-length bob in a teal jacket slides a plain contract folder halfway across. Both faces visible in three-quarter view. Only the folder and two glasses on the table; a broad muted coral background shape."
+    },
+    {
+      "id": "ceramics-compact",
+      "title": "Learning to make by hand",
+      "prompt": "Square adult editorial spot illustration in opaque colored ink and blunt dip-pen drawing. Use economical, angular, slightly uneven shapes. The drawing has lost-and-found contours: some edges have one thick mark, some a thin taper, others are left open. Faces are drawn with a handful of marks, not shaded portraits. Each eye is a small dark brush comma directly on skin-colored fill; the whites of the eyes are not drawn. Keep gaze readable through brow and head angle. Make the two faces distinct through jaw, nose, mouth placement and hair silhouette. Choose two local irregularities per person: an off-center mouth, an uneven hair edge, an unequal brow, or a fill ending short of a contour. These are deliberate drawing choices, not paper grain or random scribbles. Keep hands and object contact physically plausible. Several flat local colors against white negative space. No gradient shading, surface noise, glossy highlights, readable text, decorative filler or 3D rendering.\n\nScene: A freckled man with wavy hair and a navy work shirt shapes the rim of a clay bowl on a pottery wheel. His face is visible in three-quarter view looking down toward his hands; an apprentice with a cropped haircut and saffron shirt watches from the side. One finished blue bowl beside the wheel. White studio background with one broad lavender shape. The pottery wheel, touching hands and clay bowl are physically coherent."
+    }
+  ],
+  "assets": {
+    "speaking": "exec-7d3b6f5b-281a-4021-ad8b-f25728c3e2ce.png",
+    "negotiation": "exec-b8fa1024-d886-4137-a698-c66718608932.png",
+    "ceramics": "exec-9df79dbf-9546-4525-99e0-796226a38773.png"
+  },
+  "note": "Selected exploratory compact-prompt outputs. Native SVG hero is authored directly in index.html."
+}

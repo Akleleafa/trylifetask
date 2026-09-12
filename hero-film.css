@@ -1,0 +1,30 @@
+/* The hero is a single, locally rendered 3D film. */
+.hero-film {width:min(1000px,100%);margin:18px auto 50px;position:relative}
+.film-frame {aspect-ratio:2.15;overflow:hidden;background:var(--cream)}
+.paper-film {display:block;width:100%;height:100%;object-fit:contain}
+.film-footer {display:flex;align-items:center;justify-content:center;gap:18px;min-height:48px;margin:0 24px;position:relative}
+.film-caption {font-family:Lora,Georgia,serif;font-size:17px;color:#47617a;text-align:center;line-height:1.5}
+.film-toggle {border:1px solid #d8deda;border-radius:50%;width:40px;height:40px;flex:none;display:grid;place-items:center;background:#fffefa;color:#355b78;cursor:pointer;transition:background .2s,transform .2s}
+.film-toggle[hidden] {display:none}
+.film-toggle:hover {background:#f5eddd;transform:scale(1.04)}
+.film-toggle:focus-visible {outline:2px solid #355b78;outline-offset:4px}
+.film-toggle svg {width:17px;height:17px}
+.film-play {fill:currentColor;stroke:none}
+.film-pause {fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;display:none}
+.is-playing .film-play {display:none}
+.is-playing .film-pause {display:block}
+.visually-hidden {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(min-width:701px) {
+  .hero {padding-top:42px}
+  .hero h1 {font-size:clamp(58px,6.3vw,84px)}
+  .hero-lede {margin-top:29px;margin-bottom:24px}
+}
+@media(max-width:700px) {
+  .hero-film {margin:12px auto 36px}
+  .film-frame {aspect-ratio:4/3}
+  .paper-film {object-fit:cover}
+  .film-footer {margin:-8px 20px 0;gap:12px;min-height:55px}
+  .film-caption {font-size:14px;max-width:240px}
+  .film-toggle {width:38px;height:38px}
+}
+@media(prefers-reduced-motion:reduce) {.film-toggle {transition:none}}
