@@ -576,3 +576,6 @@ h1,h2{font-weight:700}h1 em,h2 em,h1 span,h2 span{font-style:normal}
 @media(max-width:1000px){.pattern-question{font-size:12px;padding:11px 10px}}
 @media(max-width:700px){.section-label{font-size:11px;margin-bottom:16px}.feature-benefits{font-size:15px;gap:12px;margin-top:22px}.process-opening .process-captions{min-height:62px;margin-bottom:16px}.process-opening .process-captions p{max-width:350px;font-size:13px}.expert-section .expert-grid>figure{background:#ffffff0b;border-color:#ffffff40}.expert-intro{font-size:15px;margin-bottom:24px}.direction-pattern{border-radius:22px}.pattern-question{font-size:12px;padding:10px 9px}.pattern-question.energy{left:26%;top:22%}.pattern-question.next{left:74%;top:22%}.pattern-question.strength{top:81%}.audience{gap:30px}}
 @media(max-width:380px){.pattern-question{font-size:10.5px;padding:9px 8px}}
+
+/* Meaningful icons for the three product section labels. */
+.section-label:before{display:none}.section-label svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
