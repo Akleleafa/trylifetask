@@ -4,7 +4,6 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)'),motionButton=docume
 const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav-links');
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('is-open',open);});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');}});
 const reveals=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');reveals.unobserve(e.target);}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>reveals.observe(e));
-const board=document.querySelector('.real-skill-board');const boardObserver=new IntersectionObserver(entries=>{if(entries[0].isIntersecting){board.classList.add('board-arrived');boardObserver.disconnect();}},{threshold:.15});boardObserver.observe(board);
 function syncVideo(){}
 // Timelines stop entirely offscreen; return a delay when the image is static.
 const timelines=[];const clamp=n=>Math.max(0,Math.min(1,n)),ease=n=>{n=clamp(n);return n*n*(3-2*n);};
@@ -119,10 +118,7 @@ function renderProcess(t){t=t<=2600?t:Math.max(2600,t-2400);renderProcessBase(t)
 let processMeasureFrame=0;function scheduleProcessMeasurement(){if(processMeasureFrame)return;processMeasureFrame=requestAnimationFrame(()=>{processMeasureFrame=0;measureProcess();});}const processResizeObserver=new ResizeObserver(scheduleProcessMeasurement);[processScene,processOpening.querySelector(".process-map"),openingCourseScroll].forEach(element=>processResizeObserver.observe(element));measureProcess();document.fonts.ready.then(scheduleProcessMeasurement);new Timeline(processScene,20600,renderProcess,18300);
 
 
-const conversation=document.querySelector('.guided-conversation'),answer=conversation.querySelector('.conversation-typed');
-const reply='I work in operations, but I keep coming back to sketching and making things. Could product design fit me?';let lastReply='';
-function renderConversation(t){const reset=t>15900,set=(name,on)=>conversation.classList.toggle(name,!reset&&on);conversation.classList.toggle('is-resetting',reset);set('question-ready',t>750);set('composer-ready',t>1450);set('sending',t>5900&&t<6250);set('answer-sent',t>6250);set('waiting-followup',t>6700&&t<8150);set('followup-ready',t>8150);set('next-ready',t>8900);const text=reply.slice(0,Math.max(0,Math.floor((t-2200)/31)));if(text!==lastReply){answer.textContent=text;lastReply=text;}if(t>9400&&t<15800)return 15800-t;return 0;}
-new Timeline(conversation,16600,renderConversation,12000);
+
 
 
 const sectionLinks=[...nav.querySelectorAll('a[href^="#"]')];let navFrame=0;function markNavigation(){navFrame=0;const y=scrollY+innerHeight*.35;let current=null;for(const a of sectionLinks){const el=document.querySelector(a.getAttribute('href'));if(el&&el.getBoundingClientRect().top+scrollY<=y&&(!current||el.offsetTop>current.top))current={link:a,top:el.offsetTop};}sectionLinks.forEach(a=>{if(current&&a===current.link)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}window.addEventListener('scroll',()=>{if(!navFrame)navFrame=requestAnimationFrame(markNavigation)},{passive:true});markNavigation();
@@ -130,30 +126,6 @@ function measureDetailMap(){const svg=document.querySelector('.map-connectors'),
 
 
 
-
-// A short, user-controlled board on smaller screens keeps the three skill stages.
-const skillBoardMedia=matchMedia('(max-width:700px),(max-width:1000px) and (max-height:520px)');
-const skillLanes=[...board.querySelectorAll('.skill-lane')],skillPrevious=document.querySelector('.skill-board-prev'),skillNext=document.querySelector('.skill-board-next'),skillCount=document.querySelector('.skill-board-count');
-let skillBoardFrame=0;
-function updateSkillBoard(){
- skillBoardFrame=0;
- const end=Math.max(0,board.scrollWidth-board.clientWidth),step=skillLanes[1].offsetLeft-skillLanes[0].offsetLeft;
- const index=board.scrollLeft>=end-2?skillLanes.length-1:Math.min(skillLanes.length-1,Math.round(board.scrollLeft/Math.max(1,step)));
- skillPrevious.disabled=board.scrollLeft<2;skillNext.disabled=board.scrollLeft>=end-2;skillCount.textContent=(index+1)+' / '+skillLanes.length;
-}
-function moveSkillBoard(direction){
- const step=skillLanes[1].offsetLeft-skillLanes[0].offsetLeft;
- board.scrollBy({left:direction*step,behavior:reduced.matches?'instant':'smooth'});
-}
-function syncSkillBoard(){
- if(skillBoardMedia.matches){board.setAttribute('tabindex','0');board.setAttribute('role','region');board.setAttribute('aria-label','Example Skill Board. Three skill stages; use the arrow buttons or swipe to explore.');}
- else{board.removeAttribute('tabindex');board.removeAttribute('role');board.removeAttribute('aria-label');board.scrollLeft=0;}
- updateSkillBoard();
-}
-skillPrevious.addEventListener('click',()=>moveSkillBoard(-1));skillNext.addEventListener('click',()=>moveSkillBoard(1));
-board.addEventListener('scroll',()=>{if(!skillBoardFrame)skillBoardFrame=requestAnimationFrame(updateSkillBoard)},{passive:true});
-board.addEventListener('keydown',e=>{if(skillBoardMedia.matches&&(e.key==='ArrowRight'||e.key==='ArrowLeft')){e.preventDefault();moveSkillBoard(e.key==='ArrowRight'?1:-1);}});
-new ResizeObserver(syncSkillBoard).observe(board);skillBoardMedia.addEventListener('change',syncSkillBoard);syncSkillBoard();
 
 // Optional compact presentations preserve all content and support touch and keyboard.
 for(const [selector,kind,label] of [['.expert-grid','perspective','Perspectives on finding your work']]){
