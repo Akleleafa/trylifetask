@@ -578,4 +578,4 @@ h1,h2{font-weight:700}h1 em,h2 em,h1 span,h2 span{font-style:normal}
 @media(max-width:380px){.pattern-question{font-size:10.5px;padding:9px 8px}}
 
 /* Meaningful icons for the three product section labels. */
-.section-label:before{display:none}.section-label svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.section-label:before{display:none}.section-label svg{width:15px;height:15px;fill:none;stroke:#e9b744;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
