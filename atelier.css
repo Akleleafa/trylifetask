@@ -579,3 +579,8 @@ h1,h2{font-weight:700}h1 em,h2 em,h1 span,h2 span{font-style:normal}
 
 /* Meaningful icons for the three product section labels. */
 .section-label:before{display:none}.section-label svg{width:15px;height:15px;fill:none;stroke:#e9b744;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+/* Web onboarding is available alongside the mobile beta. */
+.web-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:26px}.hero-actions{flex-wrap:wrap}.web-app-link{font-weight:600}.nav-links{gap:20px}
+@media(min-width:701px) and (max-width:1100px){.nav-stores{display:none}.nav{gap:18px}}
+@media(max-width:700px){.web-actions{gap:12px}.web-actions .button{min-width:205px}.hero-actions{padding-inline:12px}}
