@@ -584,3 +584,12 @@ h1,h2{font-weight:700}h1 em,h2 em,h1 span,h2 span{font-style:normal}
 .web-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:26px}.hero-actions{flex-wrap:wrap}.web-app-link{font-weight:600}.nav-links{gap:20px}
 @media(min-width:701px) and (max-width:1100px){.nav-stores{display:none}.nav{gap:18px}}
 @media(max-width:700px){.web-actions{gap:12px}.web-actions .button{min-width:205px}.hero-actions{padding-inline:12px}}
+
+/* Keep the download actions in normal flow between the two course rows. */
+.course-abundance{display:grid;grid-template-rows:auto auto auto;gap:56px;min-height:0;padding:40px 0}
+.course-abundance .abundance-backdrop{display:contents}
+.course-abundance .abundance-row{position:relative;left:auto;top:auto;bottom:auto;transform:none;justify-self:center}
+.course-abundance .row-0{grid-row:1}
+.course-abundance .row-1{grid-row:3}
+.course-abundance .final-copy{grid-row:2;margin-inline:auto}
+@media(max-width:700px){.course-abundance{gap:40px;padding-block:32px}}
