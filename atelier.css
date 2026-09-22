@@ -631,3 +631,33 @@ h1,h2{font-weight:700}h1 em,h2 em,h1 span,h2 span{font-style:normal}
  .process-steps span{font-size:12px}
  .process-opening .process-captions p{font-size:14px}
 }
+/* Keep the tilted opening artwork intact and simplify phone navigation. */
+@media(max-width:700px){
+ .process-scene{overflow:visible}
+ .nav-stores .store-links img{height:32px}
+ .nav-stores .store-links img.google-badge{height:49px;margin:-8px}
+ .nav-stores .store-links{gap:10px}
+ .nav-links{top:calc(100% + 8px);left:12px;right:12px;margin:0;padding:10px;flex-direction:column;align-items:stretch;gap:0;border:1px solid #e8e6e0;border-radius:16px;box-shadow:0 12px 32px #243f5920;max-height:calc(100dvh - 100px);overflow-y:auto}
+ .nav-links a{min-height:50px;padding:12px 16px;font-size:16px;line-height:1.5;border-radius:8px}
+ .nav-links a+a{border-top:1px solid #eeece6}
+ .nav-links a::after{display:none}
+ .nav-links a:hover,.nav-links a[aria-current]{background:#edf3fb}
+ .nav-links .web-app-link{background:var(--blue);color:white;justify-content:center;margin-bottom:6px}
+ .site-header.has-start-button .nav-links .web-app-link{display:none}
+ .site-header.has-start-button .nav-links .web-app-link+a{border-top:0}
+ .menu-toggle{position:relative;align-content:center;justify-items:center;gap:8.5px}
+ .menu-toggle span{transition:transform .18s}
+ .menu-toggle[aria-expanded=true] span:first-child{transform:translateY(5px) rotate(45deg)}
+ .menu-toggle[aria-expanded=true] span:last-child{transform:translateY(-5px) rotate(-45deg)}
+}
+@media(max-width:360px){
+ .nav-stores .store-links img{height:30px}
+ .nav-stores .store-links img.google-badge{height:46px}
+ .nav-stores .store-links{gap:7px}
+}
+@media(max-width:335px){
+ .nav-stores .store-links img{height:27px}
+ .nav-stores .store-links img.google-badge{height:41px;margin:-7px}
+ .nav-stores .store-links{gap:6px}
+}
+
