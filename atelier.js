@@ -2,7 +2,12 @@
 document.documentElement.classList.add('js');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)'),motionButton=document.querySelector('.motion-toggle');let paused=reduced.matches;
 const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav-links');
-menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('is-open',open);});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');}});
+function closeNavigation(){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');}
+menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav.classList.toggle('is-open',open);});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeNavigation));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNavigation();});
+document.addEventListener('click',e=>{if(!e.target.closest('.nav'))closeNavigation();});
+matchMedia('(min-width:701px)').addEventListener('change',closeNavigation);
 const reveals=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');reveals.unobserve(e.target);}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>reveals.observe(e));
 function syncVideo(){}
 // Timelines stop entirely offscreen; return a delay when the image is static.
@@ -145,3 +150,13 @@ for(const [selector,kind,label] of [['.expert-grid','perspective','Perspectives 
 // Re-measure document anchors when the opening scene or wrapped copy changes height.
 const discoveryLayoutObserver=new ResizeObserver(()=>{measure=true;queueScroll();});
 [processScene,document.querySelector('.past-feature'),document.querySelector('.site-header')].forEach(e=>discoveryLayoutObserver.observe(e));
+
+// Keep the start action prominent after the product introduction reaches the header.
+const startHeader=document.querySelector('.site-header'),startSection=document.querySelector('#first-look');
+let startFrame=0;
+function updateStartAction(){startFrame=0;startHeader.classList.toggle('has-start-button',startSection.getBoundingClientRect().top<=Math.max(startHeader.getBoundingClientRect().bottom,innerHeight*0.75));}
+function queueStartAction(){if(!startFrame)startFrame=requestAnimationFrame(updateStartAction);}
+window.addEventListener('scroll',queueStartAction,{passive:true});
+window.addEventListener('resize',queueStartAction,{passive:true});
+window.addEventListener('pageshow',queueStartAction);
+document.fonts.ready.then(queueStartAction);updateStartAction();
