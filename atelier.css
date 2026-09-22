@@ -661,3 +661,10 @@ h1,h2{font-weight:700}h1 em,h2 em,h1 span,h2 span{font-style:normal}
  .nav-stores .store-links{gap:6px}
 }
 
+@media(max-width:700px){
+ .nav-links .web-app-link{display:none}
+ .nav-links .web-app-link+a{border-top:0}
+}
+.review-window{touch-action:pan-y pinch-zoom}
+.review-track{transform:translate3d(calc(var(--review-index) * -1 * (100% + var(--review-gap)) + var(--review-drag,0px)),0,0)}
+.review-track.is-dragging{transition:none;user-select:none}

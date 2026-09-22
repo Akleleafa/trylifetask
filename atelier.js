@@ -74,9 +74,9 @@ measureStudio();new ResizeObserver(measureStudio).observe(studio);document.fonts
 const stops=[...document.querySelectorAll('.discovery-stop')],rail=document.querySelector('.discovery-stops'),map=document.querySelector('.discovery-map'),gallery=document.querySelector('.course-abundance'),rows=[gallery.querySelector('.row-0'),gallery.querySelector('.row-1')];let geometry,measure=true,scrollFrame=0,lastPath='',lastMap='',lastCurrent=-1;
 function paintScroll(){scrollFrame=0;if(document.hidden)return;if(measure){const y=scrollY,m=map.getBoundingClientRect(),g=gallery.getBoundingClientRect();geometry={centers:stops.map(s=>{const r=s.getBoundingClientRect();return r.top+y+r.height/2;}),map:m.top+y,gallery:g.top+y,galleryHeight:g.height};measure=false;}const headerHeight=document.querySelector(".site-header").offsetHeight,anchor=scrollY+headerHeight+(innerHeight-headerHeight)*.5,c=geometry.centers,p=paused?1:clamp((anchor-c[0])/(c.at(-1)-c[0])),current=paused||anchor>=c.at(-1)+48?stops.length:Math.max(0,c.filter(x=>x<=anchor).length-1),mp=paused?1:clamp((anchor-geometry.map+80)/300);if(p.toFixed(4)!==lastPath){rail.style.setProperty('--path-progress',p);lastPath=p.toFixed(4);}if(current!==lastCurrent){stops.forEach((s,i)=>{s.classList.toggle('is-reached',i<=current);s.classList.toggle('is-current',i===current);});lastCurrent=current;}if(mp.toFixed(4)!==lastMap){map.style.setProperty('--map-progress',mp);lastMap=mp.toFixed(4);}if(!paused&&scrollY+innerHeight>geometry.gallery&&scrollY<geometry.gallery+geometry.galleryHeight){const offset=Math.max(-40,Math.min(40,(scrollY+innerHeight/2-geometry.gallery)*.04));rows[0].style.translate=offset+'px 0';rows[1].style.translate=-offset+'px 0';}}
 function queueScroll(){if(!scrollFrame&&!document.hidden)scrollFrame=requestAnimationFrame(paintScroll);}function refreshLayout(){measure=true;measureStudio();queueScroll();positionReview();}window.addEventListener('scroll',queueScroll,{passive:true});window.addEventListener('resize',refreshLayout,{passive:true});document.fonts.ready.then(refreshLayout);queueScroll();
-const reviewPanels=[...document.querySelectorAll('.review-panel')],reviewTrack=document.querySelector('.review-track'),reviewCount=document.querySelector('.review-count');let reviewIndex=Math.floor(reviewPanels.length/2),reviewVisible=false,reviewTimer=0;
+const reviewPanels=[...document.querySelectorAll('.review-panel')],reviewTrack=document.querySelector('.review-track'),reviewCount=document.querySelector('.review-count');let reviewIndex=Math.floor(reviewPanels.length/2),reviewVisible=false,reviewTimer=0,reviewGesture=null;
 function positionReview(){reviewTrack.style.setProperty('--review-index',reviewIndex);reviewPanels.forEach((p,i)=>{p.classList.toggle('is-current',i===reviewIndex);p.setAttribute('aria-hidden',String(i!==reviewIndex));});reviewCount.textContent=(reviewIndex+1)+' of '+reviewPanels.length;}
-function scheduleReview(){clearTimeout(reviewTimer);if(reviewVisible&&!paused&&!document.hidden)reviewTimer=setTimeout(()=>{reviewTrack.classList.add('has-moved');reviewIndex=(reviewIndex+1)%reviewPanels.length;positionReview();scheduleReview();},11000);}
+function scheduleReview(){clearTimeout(reviewTimer);if(reviewVisible&&!paused&&!document.hidden&&!reviewGesture)reviewTimer=setTimeout(()=>{reviewTrack.classList.add('has-moved');reviewIndex=(reviewIndex+1)%reviewPanels.length;positionReview();scheduleReview();},11000);}
 function changeReview(delta){reviewTrack.classList.add('has-moved');reviewIndex=(reviewIndex+delta+reviewPanels.length)%reviewPanels.length;positionReview();scheduleReview();}document.querySelector('.review-prev').addEventListener('click',()=>changeReview(-1));document.querySelector('.review-next').addEventListener('click',()=>changeReview(1));new IntersectionObserver(e=>{reviewVisible=e[0].isIntersecting;scheduleReview();},{threshold:.25}).observe(document.querySelector('.review-section'));positionReview();
 function syncMotion(){document.body.classList.toggle('is-motion-paused',paused);motionButton.textContent=paused?'Resume motion':'Pause motion';motionButton.setAttribute('aria-pressed',String(paused));timelines.forEach(t=>t.sync());syncVideo();scheduleReview();queueScroll();}
 motionButton.addEventListener('click',()=>{paused=!paused;syncMotion();});reduced.addEventListener('change',()=>{paused=reduced.matches;syncMotion();});document.addEventListener('visibilitychange',syncMotion);syncMotion();
@@ -160,3 +160,32 @@ window.addEventListener('scroll',queueStartAction,{passive:true});
 window.addEventListener('resize',queueStartAction,{passive:true});
 window.addEventListener('pageshow',queueStartAction);
 document.fonts.ready.then(queueStartAction);updateStartAction();
+
+// Horizontal swipes change reviews; vertical gestures remain native page scrolling.
+const reviewWindow=document.querySelector('.review-window');
+function finishReviewGesture(commit=false){
+ if(!reviewGesture)return;
+ const gesture=reviewGesture;reviewGesture=null;
+ reviewTrack.classList.remove('is-dragging');reviewTrack.style.removeProperty('--review-drag');
+ if(reviewWindow.hasPointerCapture(gesture.id))reviewWindow.releasePointerCapture(gesture.id);
+ if(commit&&gesture.horizontal&&Math.abs(gesture.dx)>=40)changeReview(gesture.dx<0?1:-1);
+ else{reviewTrack.classList.add('has-moved');scheduleReview();}
+}
+reviewWindow.addEventListener('pointerdown',e=>{
+ if(!e.isPrimary||e.button!==0)return;
+ reviewGesture={id:e.pointerId,x:e.clientX,y:e.clientY,dx:0,horizontal:false};
+ clearTimeout(reviewTimer);reviewWindow.setPointerCapture(e.pointerId);
+});
+reviewWindow.addEventListener('pointermove',e=>{
+ if(!reviewGesture||e.pointerId!==reviewGesture.id)return;
+ const dx=e.clientX-reviewGesture.x,dy=e.clientY-reviewGesture.y;
+ if(!reviewGesture.horizontal){
+  if(Math.abs(dy)>10&&Math.abs(dy)>Math.abs(dx)){finishReviewGesture();return;}
+  if(Math.abs(dx)<10||Math.abs(dx)<=Math.abs(dy))return;
+  reviewGesture.horizontal=true;reviewTrack.classList.add('is-dragging');
+ }
+ reviewGesture.dx=dx;reviewTrack.style.setProperty('--review-drag',dx+'px');
+});
+reviewWindow.addEventListener('pointerup',()=>finishReviewGesture(true));
+reviewWindow.addEventListener('pointercancel',()=>finishReviewGesture());
+reviewWindow.addEventListener('lostpointercapture',()=>finishReviewGesture());
