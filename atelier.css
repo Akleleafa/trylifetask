@@ -673,3 +673,8 @@ h1,h2{font-weight:700}h1 em,h2 em,h1 span,h2 span{font-style:normal}
 .course-creation-image{width:100%;max-width:400px;margin:0 auto;align-self:center}
 .course-creation-image img{display:block;width:100%;height:auto}
 @media(max-width:700px){.course-creation-image{max-width:360px}}
+/* Highlighted navigation action uses button motion, without the link underline. */
+.site-header.has-start-button .nav-links .web-app-link::after{content:none}
+.site-header.has-start-button .nav-links .web-app-link{transition:transform .2s ease,background .2s ease,color .2s ease}
+@media(hover:hover){.site-header.has-start-button .nav-links .web-app-link:hover{transform:translateY(-2px);text-decoration:none}}
+@media(prefers-reduced-motion:reduce){.site-header.has-start-button .nav-links .web-app-link{transition:none}.site-header.has-start-button .nav-links .web-app-link:hover{transform:none}}
