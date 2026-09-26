@@ -17,8 +17,8 @@ class Timeline{
  sync(){this.element.classList.toggle('is-paused',paused||!this.visible||document.hidden);if(paused||!this.visible||document.hidden){if(this.timer&&this.waitStarted){this.time+=Math.min(this.waitDelay,performance.now()-this.waitStarted);this.waitStarted=0;}cancelAnimationFrame(this.frame);clearTimeout(this.timer);this.frame=this.timer=0;this.last=0;if(paused)this.render(this.still);return;}if(!this.frame&&!this.timer){this.last=0;this.frame=requestAnimationFrame(t=>this.tick(t));}}
  tick(now){this.frame=0;if(!this.visible||paused||document.hidden)return;if(this.last)this.time+=Math.min(now-this.last,100);this.last=now;if(this.time>=this.duration){this.time%=this.duration;this.element.dataset.loops=String(Number(this.element.dataset.loops||0)+1);}const idle=this.render(this.time);if(idle>100){this.last=0;this.waitStarted=performance.now();this.waitDelay=idle;this.timer=setTimeout(()=>{this.timer=0;this.waitStarted=0;this.time+=idle;this.sync();},idle);}else this.frame=requestAnimationFrame(t=>this.tick(t));}
 }
-const studio=document.querySelector('.course-studio'),studioHeading=studio.querySelector('.studio-heading'),studioTrack=studio.querySelector('.studio-course-track');let studioScroll=0,practiceScroll=0,practicePromptScroll=0,studioPrevious='' ;
-function measureStudio(){studioScroll=Math.max(0,studioTrack.querySelector('h5').offsetTop-12);const body=studio.querySelector('.practice-body'),track=studio.querySelector('.practice-body-track');practiceScroll=Math.max(0,track.scrollHeight-body.clientHeight);if(!studio.classList.contains("practice-explained"))practicePromptScroll=practiceScroll;}
+const studio=document.querySelector('.course-studio'),studioHeading=studio?.querySelector('.studio-heading'),studioTrack=studio?.querySelector('.studio-course-track');let studioScroll=0,practiceScroll=0,practicePromptScroll=0,studioPrevious='' ;
+function measureStudio(){if(!studio)return;studioScroll=Math.max(0,studioTrack.querySelector('h5').offsetTop-12);const body=studio.querySelector('.practice-body'),track=studio.querySelector('.practice-body-track');practiceScroll=Math.max(0,track.scrollHeight-body.clientHeight);if(!studio.classList.contains("practice-explained"))practicePromptScroll=practiceScroll;}
 const vectorLayouts=new WeakMap();
 // Follow short spoken phrases, as in the app, while preserving the transcript text.
 document.querySelectorAll('.vector-words .transcript-sentence').forEach(sentence=>{
@@ -68,7 +68,7 @@ function renderStudio(t){
  studio.querySelector('.practice-body-track').style.transform=`translate3d(0,${-(practicePromptScroll*ease((t-30300)/1300)+(practiceScroll-practicePromptScroll)*ease((t-35100)/1200))}px,0)`;
  return 0;
 }
-measureStudio();new ResizeObserver(measureStudio).observe(studio);document.fonts.ready.then(measureStudio);const studioTimeline=new Timeline(studio,40400,renderStudio,24100);
+if(studio){measureStudio();new ResizeObserver(measureStudio).observe(studio);document.fonts.ready.then(measureStudio);new Timeline(studio,40400,renderStudio,24100);}
 
 // One cached-geometry scroll pass for the connected Discovery and final gallery.
 const stops=[...document.querySelectorAll('.discovery-stop')],rail=document.querySelector('.discovery-stops'),map=document.querySelector('.discovery-map'),gallery=document.querySelector('.course-abundance'),rows=[gallery.querySelector('.row-0'),gallery.querySelector('.row-1')];let geometry,measure=true,scrollFrame=0,lastPath='',lastMap='',lastCurrent=-1;
