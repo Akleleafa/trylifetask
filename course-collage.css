@@ -27,3 +27,11 @@
 .cc-design .cc-spark{left:8%;right:auto}
 @media(max-width:700px){.course-collage{max-width:430px}.course-collage-scene{margin-top:8px}.learning-band .feature{gap:20px}}
 @media(prefers-reduced-motion:reduce){.cc-phone{transform:rotate(-2deg)}.cc-card{transform:rotate(var(--cc-tilt))}}
+
+/* Give the collage the same visual weight as the discovery illustrations. */
+@media(min-width:1051px){.learning-band #learning-feature{max-width:1240px;grid-template-columns:minmax(0,1fr) minmax(0,540px);gap:56px}.course-collage{max-width:540px}}
+.cc-card{animation:cc-card-float 5.5s ease-in-out infinite alternate;animation-play-state:paused}
+.cc-speaking{animation-delay:-2.2s}.cc-design{animation-delay:-3.8s}.cc-habits{animation-delay:-1.3s}
+.cc-motion-active .cc-card{animation-play-state:running}
+@keyframes cc-card-float{from{transform:translateY(calc(var(--cc-drift) - 8px)) rotate(calc(var(--cc-tilt) - 1.5deg))}to{transform:translateY(calc(var(--cc-drift) + 8px)) rotate(calc(var(--cc-tilt) + 1.5deg))}}
+@media(prefers-reduced-motion:reduce){.cc-card{animation:none}}
