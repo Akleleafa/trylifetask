@@ -21,8 +21,8 @@
 .cc-card p{margin:2cqw 0 0;text-align:center;font:3.5cqw/1.15 var(--serif);letter-spacing:-.08cqw;color:#2c587d}
 .cc-negotiation{left:0%;top:12%;--cc-tilt:-13deg}
 .cc-speaking{right:0%;top:21%;--cc-tilt:12deg}
-.cc-design{left:0%;top:61%;--cc-tilt:-10deg;z-index:3}
-.cc-habits{right:0%;top:68%;--cc-tilt:11deg;z-index:3}
+.cc-design{left:0%;top:61%;--cc-tilt:-10deg}
+.cc-habits{right:0%;top:68%;--cc-tilt:11deg}
 .cc-spark{position:absolute;right:9%;top:-7cqw;color:#ed9c50;font:8cqw/1 var(--sans);font-weight:300}
 .cc-design .cc-spark{left:8%;right:auto}
 @media(max-width:700px){.course-collage{max-width:430px}.course-collage-scene{margin-top:8px}.learning-band .feature{gap:20px}}
