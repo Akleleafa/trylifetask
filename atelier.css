@@ -678,3 +678,5 @@ h1,h2{font-weight:700}h1 em,h2 em,h1 span,h2 span{font-style:normal}
 .site-header.has-start-button .nav-links .web-app-link{transition:transform .2s ease,background .2s ease,color .2s ease}
 @media(hover:hover){.site-header.has-start-button .nav-links .web-app-link:hover{transform:translateY(-2px);text-decoration:none}}
 @media(prefers-reduced-motion:reduce){.site-header.has-start-button .nav-links .web-app-link{transition:none}.site-header.has-start-button .nav-links .web-app-link:hover{transform:none}}
+/* Keep the LifeTask map slightly more compact at every screen size. */
+.discovery-map.assembled-map{zoom:.92;width:100%}
