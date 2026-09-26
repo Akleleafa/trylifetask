@@ -35,3 +35,6 @@
 .cc-motion-active .cc-card{animation-play-state:running}
 @keyframes cc-card-float{from{transform:translateY(calc(var(--cc-drift) - 8px)) rotate(calc(var(--cc-tilt) - 1.5deg))}to{transform:translateY(calc(var(--cc-drift) + 8px)) rotate(calc(var(--cc-tilt) + 1.5deg))}}
 @media(prefers-reduced-motion:reduce){.cc-card{animation:none}}
+/* The source crop includes an old device edge on the left; exclude it. */
+.cc-habits-art{display:block;position:relative;overflow:hidden;width:100%;aspect-ratio:1/1.12}
+.cc-card .cc-habits-art img{position:absolute;right:0;top:0;width:127%;max-width:none;height:100%;aspect-ratio:auto;object-fit:cover}
